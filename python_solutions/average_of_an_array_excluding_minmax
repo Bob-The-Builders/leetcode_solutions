@@ -1,0 +1,15 @@
+class Solution:
+    def average(self, salary: list[int]) -> float:
+        lowest = min(salary)
+        highest = max(salary)
+        total = self.sumOfArray(salary)
+        total = total - lowest - highest
+        return total / (len(salary) - 2)
+                      
+    def sumOfArray(self, array: list[int]) -> int:
+        total = 0
+        for i in array:
+            total = total + i
+        return total
+    
+print(Solution().average([1000,2000,3000]))
